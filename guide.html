@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>使用教程 · 蓝色大肥鱼 dsh-pet</title>
+<meta name="description" content="dsh-pet 蓝色大肥鱼使用教程：基本操作、播放速率、锁定位置、自言自语、开机自启、直播捕获兼容、热加载自定义角色。">
+<link rel="icon" href="assets/img/favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img src="assets/img/hero-icon.png" alt="蓝色大肥鱼">
+      <span>蓝色大肥鱼</span>
+      <span class="ver" data-version>v1.0.6.7</span>
+    </a>
+    <button class="nav-toggle" aria-label="菜单">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="download.html">下载</a>
+      <a href="guide.html" class="active">使用教程</a>
+      <a href="pet.html">宠物养护</a>
+      <a href="ai.html">AI 对话</a>
+      <a href="faq.html">常见问题</a>
+      <a href="changelog.html">更新日志</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap docs">
+  <aside class="docs-side">
+    <h4>使用教程</h4>
+    <a href="#basics">基本操作</a>
+    <a href="#drag">拖动与不透明度</a>
+    <a href="#speed">播放速率与间隔</a>
+    <a href="#bubble">自言自语气泡</a>
+    <a href="#autostart">开机自启</a>
+    <a href="#capture">直播捕获兼容</a>
+    <a href="#roles">切换与热加载角色</a>
+  </aside>
+
+  <div class="docs-body">
+    <div class="pill-row">
+      <span class="pill">适合 v1.0.6.x</span>
+      <span class="pill">Windows / macOS / Linux</span>
+    </div>
+
+    <section id="basics">
+      <h2>基本操作</h2>
+      <p>装好之后，桌宠默认出现在屏幕右下角并播放待机动画，系统托盘同时出现常驻图标。</p>
+      <table class="table">
+        <thead><tr><th>操作</th><th>效果</th></tr></thead>
+        <tbody>
+          <tr><td>左键点击桌宠</td><td>触发点击互动动画（会播放点击音效）</td></tr>
+          <tr><td>按住并拖动</td><td>移动桌宠；松开后按方向与速度处理转向、移动或惯性</td></tr>
+          <tr><td>按住 SHIFT + 左键拖动</td><td>开启「SHIFT+左键拖动」后，这是唯一的拖动方式</td></tr>
+          <tr><td>右键桌宠</td><td>打开带图标的上下文菜单（可切换新旧菜单模板）</td></tr>
+          <tr><td>光标停在鱼身上按鼠标侧键（前进）</td><td>打开 / 收起宠物养护卡片</td></tr>
+          <tr><td>双击托盘图标</td><td>显示 / 隐藏桌宠</td></tr>
+          <tr><td>右键托盘图标</td><td>设置、AI 对话、开机自启、退出等菜单</td></tr>
+        </tbody>
+      </table>
+      <div class="callout">桌宠隐藏后动画与全部定时器会暂停，CPU 占用接近 0%，显示时立即恢复。</div>
+    </section>
+
+    <section id="drag">
+      <h2>拖动与不透明度</h2>
+      <p>在「桌宠设置 → 桌宠行为 → 拖拽」与「外观 → 桌宠显示」中调整：</p>
+      <ul class="clean">
+        <li><b>锁定位置</b>：开启后桌宠固定不动，点击互动仍然有效。</li>
+        <li><b>SHIFT+左键拖动</b>：开启后必须按住 SHIFT 才能拖动，适合防止误拖。</li>
+        <li><b>不透明度</b>：10%–100% 可调，数值越小越透明，保存立即生效。</li>
+      </ul>
+      <div class="callout warn">以上三者与「鼠标穿透」不同：穿透后桌宠完全不接收鼠标事件，需要从托盘或右键菜单关闭。</div>
+    </section>
+
+    <section id="speed">
+      <h2>播放速率与动作间隔</h2>
+      <h3>调整播放速率</h3>
+      <ol class="clean">
+        <li>右键桌宠（或托盘菜单）→「桌宠设置」。</li>
+        <li>调整「播放速率」，范围 <code>1.0x</code> 到 <code>2.0x</code>。</li>
+        <li>保存后当前与后续片段都会按新速率播放。</li>
+      </ol>
+      <h3>设置动作等待间隔</h3>
+      <p>「动作等待间隔」默认是 <code>0</code>。设为大于 0 时，相邻的非待机、非转向动画之间会等待指定秒数，等待期间仍允许待机和转向动画播放，用于降低连续动作的密集节奏。</p>
+    </section>
+
+    <section id="bubble">
+      <h2>开启自言自语气泡</h2>
+      <ol class="clean">
+        <li>在「桌宠设置」中勾选「开启自言自语气泡」。</li>
+        <li>设置「随机间隔最短」和「随机间隔最长」。</li>
+        <li>在「自言自语内容」中每行填写一条文本，留空则恢复内置内容。</li>
+      </ol>
+      <p>气泡默认显示在角色可见形象的正上方并水平居中；上方空间不足时会自动选择不遮挡角色的位置。</p>
+    </section>
+
+    <section id="autostart">
+      <h2>开机自启</h2>
+      <ol class="clean">
+        <li>右键系统托盘图标。</li>
+        <li>勾选菜单中的「开机自启」。</li>
+        <li>取消勾选即关闭。状态直接读写当前用户的注册表 Run 键（Windows）或登录项 / autostart（macOS / Linux），无需管理员权限。</li>
+      </ol>
+      <div class="callout warn">若自启不生效，多为安全软件清理了未签名程序的自启项，请到其「启动项管理」中恢复；程序每次启动会自检并在被清理时气泡提醒。</div>
+    </section>
+
+    <section id="capture">
+      <h2>直播捕获兼容模式（Windows）</h2>
+      <p>用哔哩哔哩直播姬 / OBS 做窗口捕获时如果找不到桌宠，是因为它默认是"工具窗口"形态（不占任务栏，捕获软件会过滤）。</p>
+      <p>解决办法：在「桌宠设置」中勾选 <b>「直播捕获兼容模式」</b>，保存后桌宠会变为普通顶层窗口并显示标题，即可在窗口捕获列表里选中；代价是任务栏会出现桌宠图标，不开直播时取消勾选即可。</p>
+    </section>
+
+    <section id="roles">
+      <h2>切换与热加载角色</h2>
+      <p>右键菜单中的角色选择入口每次打开都会重新扫描角色目录，无需重启即可切换；Chat 版会同步更新角色名称、头像、主题色与会话隔离。</p>
+      <h3>热加载新角色：文件怎么放</h3>
+      <p>桌宠会自动扫描外部角色目录，目录名即角色 ID，含 webm 或 gif 即被识别：</p>
+      <pre><code>characters/
+└── mycat/                    ← 目录名 = 菜单里显示的角色 ID
+    ├── manifest.json         ← 可选：角色名 / prompt / 主题色 / 动作映射
+    └── videos/
+        ├── idle/  turn/  move/  click/  drag/  random/</code></pre>
+      <p>两个扫描位置（exe 同目录优先，其次用户数据目录，后者跨升级保留）：</p>
+      <table class="table">
+        <thead><tr><th>平台</th><th>exe 同目录</th><th>用户数据目录</th></tr></thead>
+        <tbody>
+          <tr><td>Windows</td><td><code>&lt;安装目录&gt;\characters\</code></td><td><code>%APPDATA%\dsh-pet\data\dsh-pet-standalone\characters\</code></td></tr>
+          <tr><td>macOS</td><td><code>.app/Contents/MacOS/characters/</code></td><td><code>~/Library/Application Support/dsh-pet/data/...</code></td></tr>
+          <tr><td>Linux</td><td>源码运行目录 <code>characters/</code></td><td><code>~/.config/dsh-pet/data/...</code></td></tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>蓝色大肥鱼 · dsh-pet</h4>
+        <p style="color:#9cc4e6">一个基于 Python + PySide6 的独立桌面宠物，免费开源。</p>
+      </div>
+      <div>
+        <h4>站内导航</h4>
+        <ul>
+          <li><a href="download.html">下载</a></li>
+          <li><a href="guide.html">使用教程</a></li>
+          <li><a href="pet.html">宠物养护</a></li>
+          <li><a href="ai.html">AI 对话</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>相关链接</h4>
+        <ul>
+          <li><a data-repo href="#">GitHub 仓库</a></li>
+          <li><a data-releases href="#">Release 发布页</a></li>
+          <li><a href="faq.html">常见问题</a></li>
+          <li><a href="changelog.html">更新日志</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> 蓝色大肥鱼 dsh-pet · 本页仅为下载入口。</span>
+      <span>素材来源与致谢见仓库 README 声明。</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

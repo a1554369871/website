@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>下载 · 蓝色大肥鱼 dsh-pet</title>
+<meta name="description" content="下载 dsh-pet 蓝色大肥鱼桌宠：Windows 安装包与绿色版、macOS Apple Silicon、Linux x86_64，含 Chat 与无 Chat 两个版本。">
+<link rel="icon" href="assets/img/favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img src="assets/img/hero-icon.png" alt="蓝色大肥鱼">
+      <span>蓝色大肥鱼</span>
+      <span class="ver" data-version>v1.0.6.7</span>
+    </a>
+    <button class="nav-toggle" aria-label="菜单">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="download.html" class="active">下载</a>
+      <a href="guide.html">使用教程</a>
+      <a href="pet.html">宠物养护</a>
+      <a href="ai.html">AI 对话</a>
+      <a href="faq.html">常见问题</a>
+      <a href="changelog.html">更新日志</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Download</div>
+        <h2>下载蓝色大肥鱼</h2>
+        <p>当前版本 <b data-version>v1.0.6.7</b>。下载文件由 GitHub Releases 提供，均为免费开源。</p>
+      </div>
+
+      <h3 style="margin-top:8px">Windows</h3>
+      <p class="muted small">安装包为当前用户安装，无需管理员权限；绿色版解压即用、删除即卸载。</p>
+      <div class="dl-grid">
+        <div class="dl-card" data-os-rec="windows">
+          <span class="badge-hot">推荐</span>
+          <span class="tag">完整功能 · Chat</span>
+          <h3>Chat 版（含 AI 对话）</h3>
+          <p class="desc">包含 AI 对话、宠物日记、和它唠嗑、看看屏幕、DeepSeek 余额等全部功能。</p>
+          <div class="dl-actions">
+            <a class="btn btn-primary btn-sm" data-dl="winChatSetup">安装包 .exe <span data-size class="os-tag"></span></a>
+            <a class="btn btn-outline btn-sm" data-dl="winChatZip">绿色版 .zip</a>
+          </div>
+        </div>
+        <div class="dl-card" data-os-rec="windows">
+          <span class="tag">轻量 · 无 Chat</span>
+          <h3>无 Chat 版（只有桌宠）</h3>
+          <p class="desc">不含 AI 对话依赖，包体更小、启动更轻，适合只要桌面陪伴的场景。</p>
+          <div class="dl-actions">
+            <a class="btn btn-outline btn-sm" data-dl="winSetup">安装包 .exe <span data-size class="os-tag"></span></a>
+            <a class="btn btn-outline btn-sm" data-dl="winZip">绿色版 .zip</a>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="margin-top:44px">macOS（Apple Silicon）</h3>
+      <p class="muted small">onedir .app，未签名（ad-hoc），首次打开需右键 →「打开」或在终端去除隔离属性，详见下方教程。</p>
+      <div class="dl-grid">
+        <div class="dl-card" data-os-rec="mac">
+          <span class="tag">macOS · 完整功能</span>
+          <h3>Chat 版</h3>
+          <p class="desc">含 AI 对话等全部功能。</p>
+          <div class="dl-actions">
+            <a class="btn btn-primary btn-sm" data-dl="macChat">下载 .zip <span data-size class="os-tag"></span></a>
+          </div>
+        </div>
+        <div class="dl-card" data-os-rec="mac">
+          <span class="tag">macOS · 轻量</span>
+          <h3>无 Chat 版</h3>
+          <p class="desc">只有桌宠本体，不接 AI。</p>
+          <div class="dl-actions">
+            <a class="btn btn-outline btn-sm" data-dl="macPlain">下载 .zip</a>
+          </div>
+        </div>
+      </div>
+      <div class="callout warn">Intel Mac 当前不提供官方包，请从源码运行或在 Intel 机器上自行构建。</div>
+
+      <h3 style="margin-top:44px">Linux（x86_64）</h3>
+      <p class="muted small">onedir 目录，解压即用。首次运行可能需要补齐少量系统库。</p>
+      <div class="dl-grid">
+        <div class="dl-card" data-os-rec="linux">
+          <span class="tag">Linux · 完整功能</span>
+          <h3>Chat 版</h3>
+          <p class="desc">含 AI 对话等全部功能。</p>
+          <div class="dl-actions">
+            <a class="btn btn-primary btn-sm" data-dl="linuxChat">下载 .zip <span data-size class="os-tag"></span></a>
+          </div>
+        </div>
+        <div class="dl-card" data-os-rec="linux">
+          <span class="tag">Linux · 轻量</span>
+          <h3>无 Chat 版</h3>
+          <p class="desc">只有桌宠本体，不接 AI。</p>
+          <div class="dl-actions">
+            <a class="btn btn-outline btn-sm" data-dl="linuxPlain">下载 .zip</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:34px">
+        两个变体使用同一套高清 WebM 素材（91 段动画），区别只是是否加载聊天子系统。以
+        <a data-releases href="#">GitHub Release 页面</a>实际上传的文件为准。
+      </div>
+    </div>
+  </section>
+
+  <!-- 安装教程 -->
+  <section class="section tint">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Install</div>
+        <h2>安装教程</h2>
+      </div>
+
+      <div class="grid grid-2">
+        <div>
+          <h3>方式一：安装包（setup.exe）</h3>
+          <div class="steps">
+            <div class="step"><h3>下载并双击运行</h3><p>出现 SmartScreen 提示时点「更多信息 → 仍要运行」（软件尚未购买代码签名证书）。</p></div>
+            <div class="step"><h3>选择语言与目录</h3><p>默认简中；默认装到 <code>%LOCALAPPDATA%\Programs\...</code>，也可浏览选到别的盘符。</p></div>
+            <div class="step"><h3>可选创建快捷方式</h3><p>勾选「创建桌面快捷方式」，完成后点「运行」立即启动。</p></div>
+          </div>
+        </div>
+        <div>
+          <h3>方式二：绿色版（zip）</h3>
+          <div class="steps">
+            <div class="step"><h3>解压到任意可写目录</h3><p>例如 <code>E:\dsh-pet\</code>，保持文件夹内结构完整。</p></div>
+            <div class="step"><h3>双击同名 exe</h3><p>例如 <code>dsh-pet-standalone-webm-chat.exe</code> 即可运行。</p></div>
+            <div class="step"><h3>删除即卸载</h3><p>整个文件夹删掉即可，不残留运行缓存。</p></div>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="margin-top:40px">macOS 使用</h3>
+      <ol class="clean">
+        <li>下载并解压得到 <code>.app</code>，可拖入「应用程序」文件夹。</li>
+        <li>首次打开：右键 .app →「打开」；或终端执行 <code>xattr -dr com.apple.quarantine xxx.app</code>。</li>
+        <li>数据目录：<code>~/Library/Application Support/dsh-pet/data/</code>。</li>
+      </ol>
+
+      <h3 style="margin-top:30px">Linux 使用</h3>
+      <pre><code>unzip dsh-pet-standalone-webm-chat-linux-x86_64.zip
+cd dsh-pet-standalone-webm-chat
+./dsh-pet-standalone-webm-chat</code></pre>
+      <p class="small muted">首次运行若缺库（Debian/Ubuntu 系）：</p>
+      <pre><code>sudo apt install libxcb-cursor0 libxkbcommon-x11-0 libegl1 libgl1 \
+                 libfontconfig1 libdbus-1-3 fonts-noto-cjk</code></pre>
+
+      <h3 style="margin-top:30px">卸载与升级</h3>
+      <ul class="clean">
+        <li><b>卸载（安装版）</b>：设置 → 应用 → 已安装的应用 → 找到 <code>dsh-pet-standalone</code> → 卸载。配置与会话默认保留。</li>
+        <li><b>升级（安装版）</b>：直接运行新版 setup.exe 覆盖安装，配置与聊天记录不受影响。</li>
+        <li><b>升级（绿色版）</b>：用新版 zip 覆盖旧文件夹即可。</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>蓝色大肥鱼 · dsh-pet</h4>
+        <p style="color:#9cc4e6">一个基于 Python + PySide6 的独立桌面宠物，免费开源。</p>
+      </div>
+      <div>
+        <h4>站内导航</h4>
+        <ul>
+          <li><a href="download.html">下载</a></li>
+          <li><a href="guide.html">使用教程</a></li>
+          <li><a href="pet.html">宠物养护</a></li>
+          <li><a href="ai.html">AI 对话</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>相关链接</h4>
+        <ul>
+          <li><a data-repo href="#">GitHub 仓库</a></li>
+          <li><a data-releases href="#">Release 发布页</a></li>
+          <li><a href="faq.html">常见问题</a></li>
+          <li><a href="changelog.html">更新日志</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> 蓝色大肥鱼 dsh-pet · 本页仅为下载入口。</span>
+      <span>素材来源与致谢见仓库 README 声明。</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

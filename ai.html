@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 对话教程 · 蓝色大肥鱼 dsh-pet</title>
+<meta name="description" content="dsh-pet Chat 版 AI 对话配置教程：DeepSeek API Key 五步配置、看看屏幕、DeepSeek 余额查询与常见报错。">
+<link rel="icon" href="assets/img/favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img src="assets/img/hero-icon.png" alt="蓝色大肥鱼">
+      <span>蓝色大肥鱼</span>
+      <span class="ver" data-version>v1.0.6.7</span>
+    </a>
+    <button class="nav-toggle" aria-label="菜单">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="download.html">下载</a>
+      <a href="guide.html">使用教程</a>
+      <a href="pet.html">宠物养护</a>
+      <a href="ai.html" class="active">AI 对话</a>
+      <a href="faq.html">常见问题</a>
+      <a href="changelog.html">更新日志</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap docs">
+  <aside class="docs-side">
+    <h4>AI 对话教程</h4>
+    <a href="#quick">零基础快速配置</a>
+    <a href="#key">创建 API Key</a>
+    <a href="#advanced">高级设置</a>
+    <a href="#screen">看看屏幕</a>
+    <a href="#balance">DeepSeek 余额</a>
+    <a href="#errors">常见报错</a>
+  </aside>
+
+  <div class="docs-body">
+    <div class="pill-row">
+      <span class="pill">仅 Chat 版</span>
+      <span class="pill">兼容 OpenAI 接口</span>
+    </div>
+
+    <section id="quick">
+      <h2>零基础快速配置（照抄版）</h2>
+      <p>不想研究 API 的话，打开「AI 设置」后<b>只需要填一样东西：API Key</b>，其他按下面照抄即可。</p>
+      <table class="table">
+        <thead><tr><th>设置项</th><th>填这个</th></tr></thead>
+        <tbody>
+          <tr><td>API 地址</td><td><code>https://api.deepseek.com</code></td></tr>
+          <tr><td>模型</td><td><code>deepseek-v4-flash</code></td></tr>
+          <tr><td>API Key</td><td>在 DeepSeek 开放平台创建（步骤见下）</td></tr>
+        </tbody>
+      </table>
+      <div class="callout">软件首次打开时，API 地址和模型默认就是上面这两个值，不用改，粘上 Key 就能用。</div>
+    </section>
+
+    <section id="key">
+      <h2>创建 API Key</h2>
+      <div class="steps">
+        <div class="step"><h3>打开开放平台</h3><p>访问 <a href="https://platform.deepseek.com" target="_blank" rel="noopener">platform.deepseek.com</a>，用手机号注册 / 登录。</p></div>
+        <div class="step"><h3>进入 API Keys</h3><p>左侧菜单找到「API Keys」→「创建 API Key」。</p></div>
+        <div class="step"><h3>复制密钥</h3><p>复制生成的 <code>sk-</code> 开头密钥（只完整显示一次，务必立刻保存）。</p></div>
+        <div class="step"><h3>填入桌宠</h3><p>右键桌宠 →「AI 设置」→ 粘贴到 API Key → 保存。</p></div>
+        <div class="step"><h3>测试连接</h3><p>点「测试连接」，看到「连接成功」就可以去聊天了。</p></div>
+      </div>
+    </section>
+
+    <section id="advanced">
+      <h2>高级设置</h2>
+      <ul class="clean">
+        <li>支持 OpenAI Chat Completions 兼容接口；可自定义 API 地址、模型、超时、温度和最大输出 token。</li>
+        <li>支持 SSE 流式输出、多轮上下文裁剪、会话 JSON 持久化、停止生成、失败重试。</li>
+        <li>对话按角色隔离，切换角色不会把旧角色消息带过去。</li>
+        <li>API Key 优先使用系统钥匙串；不可用时可按设置选择配置文件回退。</li>
+        <li>聊天窗支持内置主题壁纸 / 自定义图片 / 裁剪取景 / 桌面透明，遮罩浓度可调。</li>
+      </ul>
+      <div class="callout">系统提示词（System Prompt）在「设置 → AI 设置」里配置，它同时决定普通聊天和宠物日记、和它唠嗑的人设。</div>
+    </section>
+
+    <section id="screen">
+      <h2>看看屏幕（Chat 版）</h2>
+      <p>右键菜单 →「看看屏幕」：截取当前屏幕（含多显示器）→ 附带前台窗口「程序名 | 标题」→ 发给视觉模型，用人设口吻回应一句，结果以气泡显示。</p>
+      <ul class="clean">
+        <li>回复会自动同步到 AI 对话当前会话，可继续追问；聊天窗未打开时仅气泡显示。</li>
+        <li>截图自动压缩（最长边 768px、JPEG 70）后仅在内存中处理，<b>不写入本地文件</b>。</li>
+        <li>视觉模型可在 AI 设置中单独配置，或勾选「同聊天模型」复用聊天配置。</li>
+      </ul>
+      <div class="callout warn">每次「看看屏幕」都会按一次视觉模型请求计费；有 4 秒冷却防连点，免费档高峰可能遇到限流。</div>
+    </section>
+
+    <section id="balance">
+      <h2>DeepSeek 余额</h2>
+      <p>右键菜单或托盘 →「DeepSeek 余额」：查询开放平台账户余额，以气泡显示，例如「余额 ¥12.34（充值 ¥10.00 / 赠送 ¥2.34）」。</p>
+      <ul class="clean">
+        <li>数据来自 DeepSeek 官方 <code>/user/balance</code> 接口，使用当前配置的 API Key 鉴权（需使用官方端点）。</li>
+        <li>结果 30 秒内缓存复用，重复查询秒回。</li>
+        <li>设置里可开启「余额自动刷新」（分钟级，0=关闭）与「点击显示余额」。</li>
+      </ul>
+    </section>
+
+    <section id="errors">
+      <h2>常见报错</h2>
+      <table class="table">
+        <thead><tr><th>提示</th><th>原因与处理</th></tr></thead>
+        <tbody>
+          <tr><td>认证失败（401/403）</td><td>Key 复制漏了字符或多了空格，重新粘贴一次。</td></tr>
+          <tr><td>余额不足（402）</td><td>账号没额度了，网络和配置正常，去平台充值即可。</td></tr>
+          <tr><td>连接超时</td><td>检查网络 / 代理，或适当调大「超时」设置。</td></tr>
+          <tr><td>限流（高峰）</td><td>免费档高峰可能限流，稍后重试。</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>蓝色大肥鱼 · dsh-pet</h4>
+        <p style="color:#9cc4e6">一个基于 Python + PySide6 的独立桌面宠物，免费开源。</p>
+      </div>
+      <div>
+        <h4>站内导航</h4>
+        <ul>
+          <li><a href="download.html">下载</a></li>
+          <li><a href="guide.html">使用教程</a></li>
+          <li><a href="pet.html">宠物养护</a></li>
+          <li><a href="ai.html">AI 对话</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>相关链接</h4>
+        <ul>
+          <li><a data-repo href="#">GitHub 仓库</a></li>
+          <li><a data-releases href="#">Release 发布页</a></li>
+          <li><a href="faq.html">常见问题</a></li>
+          <li><a href="changelog.html">更新日志</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> 蓝色大肥鱼 dsh-pet · 本页仅为下载入口。</span>
+      <span>素材来源与致谢见仓库 README 声明。</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

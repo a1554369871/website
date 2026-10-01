@@ -1,0 +1,10 @@
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.log
+
+# Node（本站在需要本地工具时才用得到，非必需）
+node_modules/

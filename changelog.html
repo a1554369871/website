@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>更新日志 · 蓝色大肥鱼 dsh-pet</title>
+<meta name="description" content="dsh-pet 蓝色大肥鱼更新日志：v1.0.6.x 系列补丁与历史版本亮点。">
+<link rel="icon" href="assets/img/favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img src="assets/img/hero-icon.png" alt="蓝色大肥鱼">
+      <span>蓝色大肥鱼</span>
+      <span class="ver" data-version>v1.0.6.7</span>
+    </a>
+    <button class="nav-toggle" aria-label="菜单">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="download.html">下载</a>
+      <a href="guide.html">使用教程</a>
+      <a href="pet.html">宠物养护</a>
+      <a href="ai.html">AI 对话</a>
+      <a href="faq.html">常见问题</a>
+      <a href="changelog.html" class="active">更新日志</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="wrap" style="max-width:820px">
+    <div class="section-head">
+      <div class="eyebrow">Changelog</div>
+      <h2>更新日志</h2>
+      <p>当前维护的权威版本线为 <b>1.0.x</b>。以下按时间倒序排列。</p>
+    </div>
+
+    <article class="card" style="margin-bottom:20px">
+      <span class="tag" style="font-size:.78rem;font-weight:700;color:#fff;background:var(--blue);padding:3px 12px;border-radius:999px">v1.0.6.7</span>
+      <h3 style="margin-top:12px">唠嗑全量收录 + 日记每日成文</h3>
+      <ul class="clean">
+        <li>大型唠嗑线程收录大肥鱼的<b>所有发言</b>：自言自语、吃喝养护、久坐提醒、主动识屏、agent 联动、查余额、看看屏幕及状态气泡（宠物日记除外）。</li>
+        <li>随机自言自语只展示、不作为模型回复的上下文，避免它对着自己的碎碎念接话。</li>
+        <li>宠物日记改为每天本地 <b>23:00</b> 写一条；应用没运行则下次启动补写一条。</li>
+      </ul>
+    </article>
+
+    <article class="card" style="margin-bottom:20px">
+      <span class="tag" style="font-size:.78rem;font-weight:700;color:#fff;background:var(--blue);padding:3px 12px;border-radius:999px">v1.0.6.6</span>
+      <h3 style="margin-top:12px">点击排队修复</h3>
+      <ul class="clean">
+        <li>同时勾选「点击显示余额」与「点击随机自言自语」时，按承诺自动排队：先余额气泡，结束后隔约 1 秒再播自言自语。</li>
+        <li>连续点击会重置序列，只按最后一次点击从头完整显示，不叠加气泡。</li>
+      </ul>
+    </article>
+
+    <article class="card" style="margin-bottom:20px">
+      <span class="tag" style="font-size:.78rem;font-weight:700;color:#fff;background:var(--blue);padding:3px 12px;border-radius:999px">v1.0.6.5</span>
+      <h3 style="margin-top:12px">聊天背景完善</h3>
+      <ul class="clean">
+        <li>「裁剪取景」真正生效：按归一化取景框先裁后缩放，现代与经典聊天窗都适用。</li>
+        <li>新增「桌面透明」背景，遮罩浓度从完全透明到纯黑可调，覆盖侧边栏与标题栏。</li>
+        <li>现代聊天窗标题栏新增外观设置快捷入口。</li>
+      </ul>
+    </article>
+
+    <article class="card" style="margin-bottom:20px">
+      <span class="tag" style="font-size:.78rem;font-weight:700;color:#fff;background:var(--blue);padding:3px 12px;border-radius:999px">v1.0.6.4</span>
+      <h3 style="margin-top:12px">投喂改为动画结束后结算</h3>
+      <ul class="clean">
+        <li>喂食时先扣菜并播放动画，动画播完才加饱食度 / 心情；动画期间再次投喂会被婉拒。</li>
+        <li>「和它唠嗑」默认滚到最新消息，并复用 System Prompt 人设。</li>
+      </ul>
+    </article>
+
+    <article class="card" style="margin-bottom:20px">
+      <span class="tag" style="font-size:.78rem;font-weight:700;color:#fff;background:var(--blue);padding:3px 12px;border-radius:999px">v1.0.6.3</span>
+      <h3 style="margin-top:12px">会话管理去重</h3>
+      <ul class="clean">
+        <li>内置 AI 对话窗移除重复的会话管理（新建、列表、搜索、重命名、置顶、批量、删除等），交给 DSH 页面本身。</li>
+        <li>侧栏只留「宠物日记」「和它唠嗑」两个原生页与「跟随桌宠」，每个角色保持一条连续对话。</li>
+      </ul>
+    </article>
+
+    <article class="card" style="margin-bottom:20px">
+      <span class="tag" style="font-size:.78rem;font-weight:700;color:#fff;background:var(--blue);padding:3px 12px;border-radius:999px">v1.0.6.2 / v1.0.6.1 / v1.0.6</span>
+      <h3 style="margin-top:12px">启动优化系列</h3>
+      <ul class="clean">
+        <li>修复 DSH 联动「一键安装桥接插件」在 corepack pnpm、中文 Windows、源码开发版 home 等场景下的失败。</li>
+        <li>AI 设置新增「DeepSeek Harness 桌面版路径」，「启动 DeepSeek Harness」优先打开桌面版客户端，找不到再回退网页版。</li>
+      </ul>
+    </article>
+
+    <article class="card" style="margin-bottom:20px">
+      <span class="tag" style="font-size:.78rem;font-weight:700;color:#fff;background:var(--blue);padding:3px 12px;border-radius:999px">v1.0.5</span>
+      <h3 style="margin-top:12px">陪伴版：和它唠嗑</h3>
+      <ul class="clean">
+        <li>新增「和它唠嗑」：记录大肥鱼日常说的话，你可以回复，它会主动起话题、你没回会追问一次。</li>
+        <li>宠物日记改为两步生成（先思考再写正文），措辞更拟人。</li>
+      </ul>
+    </article>
+
+    <article class="card" style="margin-bottom:20px">
+      <span class="tag" style="font-size:.78rem;font-weight:700;color:#fff;background:var(--blue);padding:3px 12px;border-radius:999px">v1.0.4 / v1.0.3 / v1.0.2</span>
+      <h3 style="margin-top:12px">数据治理与宠物养护</h3>
+      <ul class="clean">
+        <li>所有用户数据统一收纳到单一数据根 <code>%APPDATA%\dsh-pet\data</code>，首次启动自动迁移旧目录。</li>
+        <li>重做宠物养护卡片；新增宠物养护体系（心情 / 饱食、做菜投喂、宠物日记、久坐提醒）。</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <span class="tag" style="font-size:.78rem;font-weight:700;color:#fff;background:var(--blue);padding:3px 12px;border-radius:999px">v4.0.x（上游主线）</span>
+      <h3 style="margin-top:12px">桌面体验与性能基线</h3>
+      <ul class="clean">
+        <li>现代双 UI：新版右键菜单、设置对话框、AI 对话窗口（侧栏 + 卡片 / 双栏工作台）。</li>
+        <li>隐藏即零功耗、启动懒加载、主动识屏陪伴、Agent 联动。</li>
+        <li>锁定位置、SHIFT 拖动、不透明度、托盘菜单同步等桌宠新功能。</li>
+      </ul>
+      <p class="small muted" style="margin-bottom:0">完整历史请查看 <a data-releases href="#">GitHub Release 页面</a>。</p>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>蓝色大肥鱼 · dsh-pet</h4>
+        <p style="color:#9cc4e6">一个基于 Python + PySide6 的独立桌面宠物，免费开源。</p>
+      </div>
+      <div>
+        <h4>站内导航</h4>
+        <ul>
+          <li><a href="download.html">下载</a></li>
+          <li><a href="guide.html">使用教程</a></li>
+          <li><a href="pet.html">宠物养护</a></li>
+          <li><a href="ai.html">AI 对话</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>相关链接</h4>
+        <ul>
+          <li><a data-repo href="#">GitHub 仓库</a></li>
+          <li><a data-releases href="#">Release 发布页</a></li>
+          <li><a href="faq.html">常见问题</a></li>
+          <li><a href="changelog.html">更新日志</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> 蓝色大肥鱼 dsh-pet · 本页仅为下载入口。</span>
+      <span>素材来源与致谢见仓库 README 声明。</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

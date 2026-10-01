@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>常见问题 · 蓝色大肥鱼 dsh-pet</title>
+<meta name="description" content="dsh-pet 常见问题：找不到桌宠、开机自启不生效、数据目录、卸载升级、直播捕获、隐私说明。">
+<link rel="icon" href="assets/img/favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img src="assets/img/hero-icon.png" alt="蓝色大肥鱼">
+      <span>蓝色大肥鱼</span>
+      <span class="ver" data-version>v1.0.6.7</span>
+    </a>
+    <button class="nav-toggle" aria-label="菜单">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="download.html">下载</a>
+      <a href="guide.html">使用教程</a>
+      <a href="pet.html">宠物养护</a>
+      <a href="ai.html">AI 对话</a>
+      <a href="faq.html" class="active">常见问题</a>
+      <a href="changelog.html">更新日志</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap docs">
+  <aside class="docs-side">
+    <h4>常见问题</h4>
+    <a href="#missing">找不到桌宠了</a>
+    <a href="#autostart">开机自启不生效</a>
+    <a href="#data">数据存在哪里</a>
+    <a href="#uninstall">卸载与升级</a>
+    <a href="#capture">直播捕获找不到窗口</a>
+    <a href="#privacy">隐私与安全</a>
+    <a href="#platform">macOS / Linux 注意</a>
+    <a href="#feedback">反馈问题</a>
+  </aside>
+
+  <div class="docs-body">
+    <section id="missing">
+      <h2>找不到桌宠了</h2>
+      <p>看系统托盘（可能收在「显示隐藏的图标」里），<b>双击托盘图标</b>可显示 / 隐藏桌宠。如果开了「鼠标穿透」，需要从托盘或右键菜单关闭它才能重新点到桌宠。</p>
+    </section>
+
+    <section id="autostart">
+      <h2>开机自启不生效</h2>
+      <p>常见原因是安全软件 / 系统优化工具（360、电脑管家、Defender 等）拦截或清理了未签名程序的自启项。</p>
+      <ul class="clean">
+        <li>到安全软件的「开机加速 / 启动项管理」中恢复桌宠自启项。</li>
+        <li>程序每次启动会自检：若发现「之前开启过但已被清理」，桌宠会气泡提醒。</li>
+        <li>macOS 新版系统需在「系统设置 → 通用 → 登录项」中允许桌宠（勾选时也有气泡提示）。</li>
+      </ul>
+    </section>
+
+    <section id="data">
+      <h2>数据存在哪里</h2>
+      <p>设置与聊天会话统一保存在单一数据根 <code>%APPDATA%\dsh-pet\data\</code> 下各变体独立的目录中，重装 / 升级都不会丢失：</p>
+      <table class="table">
+        <thead><tr><th>运行方式</th><th>数据目录</th></tr></thead>
+        <tbody>
+          <tr><td>Chat 版</td><td><code>%APPDATA%\dsh-pet\data\dsh-pet-standalone-webm-chat\</code></td></tr>
+          <tr><td>无 Chat 版</td><td><code>%APPDATA%\dsh-pet\data\dsh-pet-standalone-webm\</code></td></tr>
+          <tr><td>源码运行</td><td><code>%APPDATA%\dsh-pet\data\dsh-pet-standalone\</code></td></tr>
+          <tr><td>macOS</td><td><code>~/Library/Application Support/dsh-pet/data/</code></td></tr>
+          <tr><td>Linux</td><td><code>~/.config/dsh-pet/data/</code></td></tr>
+        </tbody>
+      </table>
+      <p>常见文件：<code>config.json</code>（设置与位置）、<code>pet_journal.json</code>（宠物日记）、<code>pet_diary_chat.json</code>（和它唠嗑）、会话 JSON 等。</p>
+    </section>
+
+    <section id="uninstall">
+      <h2>卸载与升级</h2>
+      <ul class="clean">
+        <li><b>卸载（安装版）</b>：设置 → 应用 → 已安装的应用 → 找到 <code>dsh-pet-standalone</code> → 卸载。配置与会话默认保留，彻底清除可手动删数据目录。</li>
+        <li><b>升级（安装版）</b>：运行新版 setup.exe 覆盖安装，配置与聊天记录不受影响。</li>
+        <li><b>绿色版</b>：解压覆盖旧文件夹即可；删除文件夹即卸载。</li>
+      </ul>
+    </section>
+
+    <section id="capture">
+      <h2>直播捕获找不到窗口</h2>
+      <p>桌宠默认是「工具窗口」形态，会被 OBS / 直播姬的窗口捕获过滤掉。在「桌宠设置」中勾选 <b>「直播捕获兼容模式」</b> 即可被捕获；代价是任务栏会出现桌宠图标。</p>
+    </section>
+
+    <section id="privacy">
+      <h2>隐私与安全</h2>
+      <ul class="clean">
+        <li>发布物<b>不含任何本地运行数据、聊天历史与私人凭据</b>（仓库 <code>data/</code> 仅保留占位文件）。</li>
+        <li>「看看屏幕」与「主动识屏」的截图仅在内存中处理并直接发送给你配置的模型服务商，<b>不写入本地文件</b>，也不发送到本项目自建服务器。</li>
+        <li>API Key 优先使用系统钥匙串存储，钥匙串不可用时可按设置选择配置文件回退。</li>
+        <li>请你遵循所配置模型服务商的隐私政策。</li>
+      </ul>
+    </section>
+
+    <section id="platform">
+      <h2>macOS / Linux 注意</h2>
+      <ul class="clean">
+        <li><b>macOS</b>：未签名（ad-hoc），首次需右键 →「打开」或去除隔离属性；官方仅提供 Apple Silicon 包。</li>
+        <li><b>Linux</b>：建议 X11 桌面；缺库时安装 <code>libxcb-cursor0 libxkbcommon-x11-0 libegl1 libgl1 libfontconfig1 libdbus-1-3 fonts-noto-cjk</code>；GNOME 托盘需装 AppIndicator 扩展。</li>
+      </ul>
+    </section>
+
+    <section id="feedback">
+      <h2>反馈问题</h2>
+      <p>遇到 Bug 或有功能建议，欢迎到 <a data-repo href="#">GitHub 仓库</a> 提 Issue。下载与版本请以 <a data-releases href="#">Release 页面</a> 为准。</p>
+    </section>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>蓝色大肥鱼 · dsh-pet</h4>
+        <p style="color:#9cc4e6">一个基于 Python + PySide6 的独立桌面宠物，免费开源。</p>
+      </div>
+      <div>
+        <h4>站内导航</h4>
+        <ul>
+          <li><a href="download.html">下载</a></li>
+          <li><a href="guide.html">使用教程</a></li>
+          <li><a href="pet.html">宠物养护</a></li>
+          <li><a href="ai.html">AI 对话</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>相关链接</h4>
+        <ul>
+          <li><a data-repo href="#">GitHub 仓库</a></li>
+          <li><a data-releases href="#">Release 发布页</a></li>
+          <li><a href="faq.html">常见问题</a></li>
+          <li><a href="changelog.html">更新日志</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> 蓝色大肥鱼 dsh-pet · 本页仅为下载入口。</span>
+      <span>素材来源与致谢见仓库 README 声明。</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

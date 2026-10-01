@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>宠物养护 · 蓝色大肥鱼 dsh-pet</title>
+<meta name="description" content="dsh-pet 宠物养护玩法：心情与饱食、做菜投喂、冰箱菜市场、宠物日记、和它唠嗑、久坐提醒与小~鱼干。">
+<link rel="icon" href="assets/img/favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img src="assets/img/hero-icon.png" alt="蓝色大肥鱼">
+      <span>蓝色大肥鱼</span>
+      <span class="ver" data-version>v1.0.6.7</span>
+    </a>
+    <button class="nav-toggle" aria-label="菜单">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="download.html">下载</a>
+      <a href="guide.html">使用教程</a>
+      <a href="pet.html" class="active">宠物养护</a>
+      <a href="ai.html">AI 对话</a>
+      <a href="faq.html">常见问题</a>
+      <a href="changelog.html">更新日志</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap docs">
+  <aside class="docs-side">
+    <h4>宠物养护</h4>
+    <a href="#status">认识状态</a>
+    <a href="#coin">摸鱼赚小鱼干</a>
+    <a href="#market">菜市场与菜谱</a>
+    <a href="#cook">做菜与投喂</a>
+    <a href="#fridge">冰箱保鲜</a>
+    <a href="#self">它也会照顾自己</a>
+    <a href="#sedentary">久坐提醒</a>
+    <a href="#journal">宠物日记</a>
+    <a href="#chat">和它唠嗑</a>
+  </aside>
+
+  <div class="docs-body">
+    <div class="pill-row">
+      <span class="pill">Chat / 无 Chat 通用</span>
+      <span class="pill">当天养成，离线也掉但掉得慢</span>
+    </div>
+
+    <section id="status">
+      <h2>认识状态：心情与饱食</h2>
+      <p>大肥鱼有 <b>饱食度</b> 和 <b>心情</b> 两个状态。把鼠标停在它身上按<b>鼠标侧键（前进键）</b>，或右键菜单「宠物养护」、托盘菜单，都能打开跟随桌宠的养护卡片。</p>
+      <ul class="clean">
+        <li>饱食度默认每 3 小时现实时间下降 20%，心情随时间缓慢下降，饿太久时心情掉得更快。</li>
+        <li>关掉软件期间照常衰减，但只有约四成速度，并且有保底（饱食不低于 35、心情不低于 40），<b>不会饿死</b>。</li>
+        <li>卡片顶部两栏并排读数：状态词比数字大，先告诉你「有点饿了」，数字供核对；跌破 30 会转成灶红色。</li>
+      </ul>
+      <div class="callout">改系统时间没有意义：时间往回拨会被忽略，往未来跳最多按 7 天结算，离谱的时间戳会被拉回当下。</div>
+    </section>
+
+    <section id="coin">
+      <h2>摸鱼赚小鱼干</h2>
+      <p>点一下大肥鱼 = 摸一下，加心情也赚 1 条小鱼干；在线挂机每小时再捡 2 条。</p>
+      <ul class="clean">
+        <li>摸鱼收益用<b>令牌桶</b>限速：每小时回 20 条、最多攒 8 条，连点约 8 下后变慢，但不会像每日硬上限那样一锁到半夜。</li>
+        <li>额度用光时它会冒一句「被我摸太多啦…N 分钟后再给我一下下」。</li>
+        <li>卡片标题行的 🐟 数量旁实时显示下一条什么时候到（「+1 就绪」/「+1 2分」，最后一分钟按秒数）。</li>
+        <li>心情越高单次加得越少（80 以上 +1，95 以上只 +0.2），心情每天最多涨 200 点。</li>
+      </ul>
+    </section>
+
+    <section id="market">
+      <h2>菜市场与菜谱</h2>
+      <p>用小鱼干在「菜市场」买食材，价格就是那一行的主角，买不起会标红。常见价格：大米 6、面条 8、鲜肉 14、鱼虾 18、砂糖 4、火锅底料 22（🐟）。</p>
+      <p>「菜谱」页列出每道菜需要什么食材、多久、回多少饱食和心情。食材齐的菜左边会亮蛋黄色边并写着「食材齐了」，点「选材」一键把食材丢进锅并跳回「做菜」。</p>
+      <p>内置 14 道菜：白米饭、早餐套餐、午餐便当、手工饺子、腊八粥、清蒸大闸蟹、团圆火锅……全部复用已有进食动画。</p>
+    </section>
+
+    <section id="cook">
+      <h2>做菜与投喂</h2>
+      <ol class="clean">
+        <li><b>下锅</b>：锅有四个固定锅位（空位是虚线格子），点下面的食材丢进锅，点锅里的食材可取回。</li>
+        <li><b>凑菜</b>：搭配必须和某道菜完全一致才算凑成，整口锅左缘转蛋黄并提示收益、解锁「开做」；只放一半会提示还差什么。</li>
+        <li><b>开做</b>：占用一个灶眼（共 3 个），要等真实时间，做好了自动进冰箱。</li>
+        <li><b>投喂</b>：冰箱里点「投喂」，播放对应吃饭动画并涨饱食 / 心情。太饱（&gt;90）硬喂收益减半还倒贴心情，撑到 98 直接拒绝。</li>
+      </ol>
+      <div class="callout">投喂从 v1.0.6.4 起改为动画结束后才结算；动画期间再次投喂会被婉拒（「嘴里还嚼着呢」）。</div>
+    </section>
+
+    <section id="fridge">
+      <h2>冰箱保鲜</h2>
+      <p>做好的菜先存冰箱，12 格、24 小时保鲜，每格有一条新鲜度带，快不新鲜的标红并写「先喂这个」，超过 24 小时会被清掉。</p>
+      <p>离线期间冰箱里的菜同样会过期，所以按节奏做、按顿喂最划算，而不是一次囤一周。</p>
+    </section>
+
+    <section id="self">
+      <h2>它也会照顾自己</h2>
+      <p>饿极了它会自己动手：先翻冰箱吃现成的，没有就自己煮碗白米饭，实在没食材还会自己掏小鱼干去买菜。可以在设置里关掉「饿了会自己煮」。</p>
+      <p>你不在的时候，冰箱就是它的食堂。</p>
+    </section>
+
+    <section id="sedentary">
+      <h2>久坐提醒</h2>
+      <p>默认<b>连续在用电脑 45 分钟</b>，它就在头顶冒泡劝你起身，气泡下面挂着两个可点的小标签：<b>「我起身了」</b> 和 <b>「等会儿」</b>。</p>
+      <ul class="clean">
+        <li>键鼠空闲超过 5 分钟算你休息过，计时清零，回来重新坐满一整个周期才会再提醒。</li>
+        <li>点「我起身了」会重置计时、记进日记，并奖励心情 +2、你 <b>+6 条小鱼干</b>；点「等会儿」只是往后推一轮。</li>
+        <li>心情越低提醒越勤：很差时约 0.6 倍（45 → 27 分钟），很好时放宽到 1.3 倍（→ 58.5 分钟）。</li>
+        <li>macOS / Linux 拿不到键鼠空闲数据，退化为固定节奏提醒。</li>
+      </ul>
+    </section>
+
+    <section id="journal">
+      <h2>宠物日记</h2>
+      <p>它会记下你对它做了什么，也记下它自己干了什么：被摸、被拖动、投喂、做菜出锅、看看屏幕、查余额、生小肥鱼……</p>
+      <ul class="clean">
+        <li>日记用<b>大肥鱼第一人称口吻</b>写成，2–4 句、不超过 200 字，允许自由发挥但不编造没发生的事。</li>
+        <li><b>每天只写一次</b>：事实先免费记在本地，到本地时间 <b>23:00</b> 合并成一条；应用没运行则下次启动补写一条。</li>
+        <li>没配 API Key 或调用失败时自动改用本地文案，绝不会把「HTTP 401」写进日记。</li>
+        <li>保留最近 200 条，存放在配置目录的 <code>pet_journal.json</code>。</li>
+      </ul>
+      <div class="callout warn">无 Chat 版本看不到日记界面，但事件仍会正常记进本地文件。</div>
+    </section>
+
+    <section id="chat">
+      <h2>和它唠嗑</h2>
+      <p>聊天窗左侧栏「宠物日记」下面有固定入口「和它唠嗑」，记录大肥鱼平时说的话，你也可以直接回它，入口与普通对话相互独立、不可删除。</p>
+      <ul class="clean">
+        <li><b>它会主动起话题</b>：大概每 60–180 分钟（可调）没在聊时自己找话头，头顶也会冒一句。</li>
+        <li><b>收录所有发言</b>：自言自语、吃喝养护、久坐提醒、主动识屏、agent 联动、查余额、看看屏幕以及状态气泡都会记进唠嗑线程（宠物日记除外）。</li>
+        <li><b>你没回它会追问</b>：默认 10 分钟没回会再问一句（只追问一次）；下次起话题还会先问「上次怎么没理我」。</li>
+        <li>话题双方都能收尾；数据存在 <code>pet_diary_chat.json</code>。</li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>蓝色大肥鱼 · dsh-pet</h4>
+        <p style="color:#9cc4e6">一个基于 Python + PySide6 的独立桌面宠物，免费开源。</p>
+      </div>
+      <div>
+        <h4>站内导航</h4>
+        <ul>
+          <li><a href="download.html">下载</a></li>
+          <li><a href="guide.html">使用教程</a></li>
+          <li><a href="pet.html">宠物养护</a></li>
+          <li><a href="ai.html">AI 对话</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>相关链接</h4>
+        <ul>
+          <li><a data-repo href="#">GitHub 仓库</a></li>
+          <li><a data-releases href="#">Release 发布页</a></li>
+          <li><a href="faq.html">常见问题</a></li>
+          <li><a href="changelog.html">更新日志</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> 蓝色大肥鱼 dsh-pet · 本页仅为下载入口。</span>
+      <span>素材来源与致谢见仓库 README 声明。</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

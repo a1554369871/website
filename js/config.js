@@ -4,12 +4,12 @@
  * ========================================================================= */
 window.DSH_SITE = {
   /* 当前版本（与桌宠 pet/__init__.py 保持一致） */
-  version: "1.0.6.7",
+  version: "1.0.7.0",
 
   /* 仓库与发布页 */
   repo: "https://github.com/a1554369871/dsh-pet",
   releasesPage: "https://github.com/a1554369871/dsh-pet/releases",
-  releaseBase: "https://github.com/a1554369871/dsh-pet/releases/download/v1.0.6.7",
+  releaseBase: "https://github.com/a1554369871/dsh-pet/releases/download/v1.0.7.0",
 
   /* 各产物文件名 + 大致体积，key 与页面 data-dl 对应 */
   files: {

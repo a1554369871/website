@@ -39,7 +39,18 @@
         <p>当前版本 <b data-version>v1.0.6.7</b>。下载文件由 GitHub Releases 提供，均为免费开源。</p>
       </div>
 
-      <h3 style="margin-top:8px">Windows</h3>
+      <div class="callout" style="margin-top:8px; display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between">
+        <div style="flex:1 1 320px">
+          <h3 style="margin:0 0 6px">懒得挑版本？用「dsh-pet 下载器」（Windows）</h3>
+          <p class="muted small" style="margin:0">
+            选择 Chat / 无 Chat 版本与安装盘符（默认 D 盘），自动下载并安装；可选填写 API Key，
+            装完即用。安装后的用户数据默认保存在所选安装目录的 <code>data\</code> 下。
+          </p>
+        </div>
+        <a class="btn btn-primary btn-sm" href="downloads/dsh-pet-downloader.exe" download rel="noopener">下载下载器 .exe</a>
+      </div>
+
+      <h3 style="margin-top:24px">Windows</h3>
       <p class="muted small">安装包为当前用户安装，无需管理员权限；绿色版解压即用、删除即卸载。</p>
       <div class="dl-grid">
         <div class="dl-card" data-os-rec="windows">
@@ -157,7 +168,7 @@ cd dsh-pet-standalone-webm-chat
 
       <h3 style="margin-top:30px">卸载与升级</h3>
       <ul class="clean">
-        <li><b>卸载（安装版）</b>：设置 → 应用 → 已安装的应用 → 找到 <code>dsh-pet-standalone</code> → 卸载。配置与会话默认保留。</li>
+        <li><b>卸载（安装版）</b>：设置 → 应用 → 已安装的应用 → 找到 <code>dsh-pet-standalone</code> → 卸载。卸载会一并清除用户数据（配置、会话、日记、缓存与 API Key）。</li>
         <li><b>升级（安装版）</b>：直接运行新版 setup.exe 覆盖安装，配置与聊天记录不受影响。</li>
         <li><b>升级（绿色版）</b>：用新版 zip 覆盖旧文件夹即可。</li>
       </ul>

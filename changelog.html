@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>更新日志 · 蓝色大肥鱼 dsh-pet</title>
-<meta name="description" content="dsh-pet 蓝色大肥鱼更新日志：v1.0.7.0 便携数据根、卸载清除数据，以及历史版本亮点。">
+<meta name="description" content="dsh-pet 蓝色大肥鱼更新日志：v1.0.8.0 官网驱动更新、音乐跟唱、桌面启动器，以及历史版本亮点。">
 <link rel="icon" href="assets/img/favicon.ico">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,7 +15,7 @@
     <a class="brand" href="index.html">
       <img src="assets/img/hero-icon.png" alt="蓝色大肥鱼">
       <span>蓝色大肥鱼</span>
-      <span class="ver" data-version>v1.0.7.0</span>
+      <span class="ver" data-version>v1.0.8.0</span>
     </a>
     <button class="nav-toggle" aria-label="菜单">☰</button>
     <nav class="nav-links">
@@ -37,6 +37,19 @@
       <h2>更新日志</h2>
       <p>当前维护的权威版本线为 <b>1.0.x</b>。以下按时间倒序排列。</p>
     </div>
+
+    <article class="card" style="margin-bottom:20px">
+      <span class="tag" style="font-size:.78rem;font-weight:700;color:#fff;background:var(--blue);padding:3px 12px;border-radius:999px">v1.0.8.0</span>
+      <h3 style="margin-top:12px">官网驱动检查更新 + 音乐跟唱 + 桌面启动器（Dock）</h3>
+      <ul class="clean">
+        <li><b>检查更新以官网为准</b>：优先读取本站 <code>updates.json</code>，可直接从官网下载更新包并在 Windows 打包版自动整合重启。</li>
+        <li><b>音乐跟唱</b>：检测到后台音乐时随机跟唱几句并伴随唱歌动作，偶尔把「听歌」记进宠物日记；修复发布版未打包 <code>pycaw/comtypes</code> 导致音乐检测失效。</li>
+        <li><b>桌面启动器（Dock）</b>：独立透明悬浮栏，可横/竖、调位置、图标大小、间距、透明度、背景、圆角与显示名称（不显示 / 下方 / 悬停）；支持单击/双击启动、拖拽排序、从桌面拖入，悬停弹跳动画与可调名称背景。</li>
+        <li>Dock <b>图标托管</b>：解析快捷方式目标提取 256px 原图（去快捷方式箭头）导入用户数据目录，支持「导入图标 / 更改目标 / 清除图标」。</li>
+        <li>快捷启动迁移：移除右键「快捷启动」子菜单，旧配置自动迁移为 Dock 条目。</li>
+        <li>修复经典菜单「桌宠设置」入口、灵动岛重复设置项与默认值；「和它唠嗑」新增右键/托盘入口；清理一批死代码并同步文档。</li>
+      </ul>
+    </article>
 
     <article class="card" style="margin-bottom:20px">
       <span class="tag" style="font-size:.78rem;font-weight:700;color:#fff;background:var(--blue);padding:3px 12px;border-radius:999px">v1.0.7.0</span>

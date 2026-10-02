@@ -15,7 +15,7 @@
     <a class="brand" href="index.html">
       <img src="assets/img/hero-icon.png" alt="蓝色大肥鱼">
       <span>蓝色大肥鱼</span>
-      <span class="ver" data-version>v1.0.6.7</span>
+      <span class="ver" data-version>v1.0.7.0</span>
     </a>
     <button class="nav-toggle" aria-label="菜单">☰</button>
     <nav class="nav-links">
@@ -40,11 +40,12 @@
     <a href="#autostart">开机自启</a>
     <a href="#capture">直播捕获兼容</a>
     <a href="#roles">切换与热加载角色</a>
+    <a href="#data">数据目录与卸载</a>
   </aside>
 
   <div class="docs-body">
     <div class="pill-row">
-      <span class="pill">适合 v1.0.6.x</span>
+      <span class="pill">适合 v1.0.7.x</span>
       <span class="pill">Windows / macOS / Linux</span>
     </div>
 
@@ -129,11 +130,24 @@
       <table class="table">
         <thead><tr><th>平台</th><th>exe 同目录</th><th>用户数据目录</th></tr></thead>
         <tbody>
-          <tr><td>Windows</td><td><code>&lt;安装目录&gt;\characters\</code></td><td><code>%APPDATA%\dsh-pet\data\dsh-pet-standalone\characters\</code></td></tr>
+          <tr><td>Windows</td><td><code>&lt;安装目录&gt;\characters\</code></td><td><code>&lt;安装目录&gt;\data\dsh-pet-standalone\characters\</code></td></tr>
           <tr><td>macOS</td><td><code>.app/Contents/MacOS/characters/</code></td><td><code>~/Library/Application Support/dsh-pet/data/...</code></td></tr>
           <tr><td>Linux</td><td>源码运行目录 <code>characters/</code></td><td><code>~/.config/dsh-pet/data/...</code></td></tr>
         </tbody>
       </table>
+    </section>
+
+    <section id="data">
+      <h2>数据目录与卸载</h2>
+      <p>自 <b>v1.0.7.0</b> 起，用户数据默认<b>跟随安装目录</b>，不再固定写在 C 盘。安装版 / 绿色版的数据根为
+        <code>&lt;安装目录&gt;\data\</code>，各变体再以子目录区分（Chat 版 <code>dsh-pet-standalone-webm-chat</code>、
+        无 Chat 版 <code>dsh-pet-standalone-webm</code>、源码运行 <code>dsh-pet-standalone</code>）。</p>
+      <ul class="clean">
+        <li><b>自动迁移</b>：首次启动若发现旧 <code>%APPDATA%\dsh-pet\data</code> 数据，会自动复制到新数据根（只复制不删除）。</li>
+        <li><b>自定义数据根</b>：可用环境变量 <code>DSH_PET_DATA_ROOT</code>，或 exe 同目录的 marker 文件指向任意位置。</li>
+        <li><b>卸载</b>：安装版卸载会清除全部用户数据（配置、会话、宠物日记、缓存与 API Key）；绿色版删除文件夹即卸载。</li>
+      </ul>
+      <div class="callout warn">卸载前如需保留数据，请先自行备份对应 <code>data\</code> 目录。</div>
     </section>
   </div>
 </div>

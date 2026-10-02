@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>更新日志 · 蓝色大肥鱼 dsh-pet</title>
-<meta name="description" content="dsh-pet 蓝色大肥鱼更新日志：v1.0.6.x 系列补丁与历史版本亮点。">
+<meta name="description" content="dsh-pet 蓝色大肥鱼更新日志：v1.0.7.0 便携数据根、卸载清除数据，以及历史版本亮点。">
 <link rel="icon" href="assets/img/favicon.ico">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,7 +15,7 @@
     <a class="brand" href="index.html">
       <img src="assets/img/hero-icon.png" alt="蓝色大肥鱼">
       <span>蓝色大肥鱼</span>
-      <span class="ver" data-version>v1.0.6.7</span>
+      <span class="ver" data-version>v1.0.7.0</span>
     </a>
     <button class="nav-toggle" aria-label="菜单">☰</button>
     <nav class="nav-links">
@@ -37,6 +37,18 @@
       <h2>更新日志</h2>
       <p>当前维护的权威版本线为 <b>1.0.x</b>。以下按时间倒序排列。</p>
     </div>
+
+    <article class="card" style="margin-bottom:20px">
+      <span class="tag" style="font-size:.78rem;font-weight:700;color:#fff;background:var(--blue);padding:3px 12px;border-radius:999px">v1.0.7.0</span>
+      <h3 style="margin-top:12px">便携数据根 + 卸载清除全部数据</h3>
+      <ul class="clean">
+        <li>新增<b>便携数据根</b>：用户数据默认跟随安装目录（<code>&lt;安装目录&gt;\data\</code>），不再固定写在 C 盘 <code>%APPDATA%</code>。</li>
+        <li>首次启动会把旧 <code>%APPDATA%\dsh-pet\data</code> 数据<b>自动复制</b>到新位置（只复制不删除）。</li>
+        <li>数据根支持重定向：环境变量 <code>DSH_PET_DATA_ROOT</code>、exe 同目录 marker、全局指针依次覆盖；DSH 桥接插件同步适配。</li>
+        <li><b>卸载清除全部用户数据</b>：配置、会话、宠物日记、缓存、DSH 桥接事件与系统钥匙串中的 API Key。</li>
+        <li>新增 Windows <b>下载器</b>：可选版本与安装盘符、可预填 AI 配置，一步下载安装。</li>
+      </ul>
+    </article>
 
     <article class="card" style="margin-bottom:20px">
       <span class="tag" style="font-size:.78rem;font-weight:700;color:#fff;background:var(--blue);padding:3px 12px;border-radius:999px">v1.0.6.7</span>

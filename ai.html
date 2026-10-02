@@ -15,7 +15,7 @@
     <a class="brand" href="index.html">
       <img src="assets/img/hero-icon.png" alt="蓝色大肥鱼">
       <span>蓝色大肥鱼</span>
-      <span class="ver" data-version>v1.0.6.7</span>
+      <span class="ver" data-version>v1.0.7.0</span>
     </a>
     <button class="nav-toggle" aria-label="菜单">☰</button>
     <nav class="nav-links">
@@ -82,6 +82,20 @@
         <li>聊天窗支持内置主题壁纸 / 自定义图片 / 裁剪取景 / 桌面透明，遮罩浓度可调。</li>
       </ul>
       <div class="callout">系统提示词（System Prompt）在「设置 → AI 设置」里配置，它同时决定普通聊天和宠物日记、和它唠嗑的人设。</div>
+      <h3>兼容多家服务商</h3>
+      <p>只要提供 OpenAI Chat Completions 兼容接口即可接入。常见选择（下载器安装时可一键预填，字段仍可手改）：</p>
+      <table class="table">
+        <thead><tr><th>服务商</th><th>API 地址</th><th>模型示例</th></tr></thead>
+        <tbody>
+          <tr><td>DeepSeek（默认）</td><td><code>https://api.deepseek.com</code></td><td><code>deepseek-v4-flash</code></td></tr>
+          <tr><td>智谱 GLM</td><td><code>https://open.bigmodel.cn/api/paas/v4</code></td><td><code>glm-4.6</code></td></tr>
+          <tr><td>Moonshot Kimi</td><td><code>https://api.moonshot.cn/v1</code></td><td><code>kimi-k2-0905-preview</code></td></tr>
+          <tr><td>阿里云百炼（通义）</td><td><code>https://dashscope.aliyuncs.com/compatible-mode/v1</code></td><td><code>qwen-plus</code></td></tr>
+          <tr><td>硅基流动 SiliconFlow</td><td><code>https://api.siliconflow.cn/v1</code></td><td><code>deepseek-ai/DeepSeek-V3</code></td></tr>
+          <tr><td>OpenAI</td><td><code>https://api.openai.com/v1</code></td><td><code>gpt-4o-mini</code></td></tr>
+        </tbody>
+      </table>
+      <p class="muted small">模型名会随服务商更新，请以对应平台文档为准；DeepSeek 余额查询需使用 DeepSeek 官方端点。</p>
     </section>
 
     <section id="screen">

@@ -15,7 +15,7 @@
     <a class="brand" href="index.html">
       <img src="assets/img/hero-icon.png" alt="蓝色大肥鱼">
       <span>蓝色大肥鱼</span>
-      <span class="ver" data-version>v1.0.6.7</span>
+      <span class="ver" data-version>v1.0.7.0</span>
     </a>
     <button class="nav-toggle" aria-label="菜单">☰</button>
     <nav class="nav-links">
@@ -61,24 +61,24 @@
 
     <section id="data">
       <h2>数据存在哪里</h2>
-      <p>设置与聊天会话统一保存在单一数据根 <code>%APPDATA%\dsh-pet\data\</code> 下各变体独立的目录中，重装 / 升级都不会丢失：</p>
+      <p>自 <b>v1.0.7.0</b> 起，设置与聊天会话默认保存在<b>安装目录</b>下的数据根里，不再固定写在 C 盘；首次启动会自动把旧 <code>%APPDATA%\dsh-pet\data</code> 数据复制过来。安装版 / 绿色版（Windows）：</p>
       <table class="table">
         <thead><tr><th>运行方式</th><th>数据目录</th></tr></thead>
         <tbody>
-          <tr><td>Chat 版</td><td><code>%APPDATA%\dsh-pet\data\dsh-pet-standalone-webm-chat\</code></td></tr>
-          <tr><td>无 Chat 版</td><td><code>%APPDATA%\dsh-pet\data\dsh-pet-standalone-webm\</code></td></tr>
+          <tr><td>Chat 版</td><td><code>&lt;安装目录&gt;\data\dsh-pet-standalone-webm-chat\</code></td></tr>
+          <tr><td>无 Chat 版</td><td><code>&lt;安装目录&gt;\data\dsh-pet-standalone-webm\</code></td></tr>
           <tr><td>源码运行</td><td><code>%APPDATA%\dsh-pet\data\dsh-pet-standalone\</code></td></tr>
           <tr><td>macOS</td><td><code>~/Library/Application Support/dsh-pet/data/</code></td></tr>
           <tr><td>Linux</td><td><code>~/.config/dsh-pet/data/</code></td></tr>
         </tbody>
       </table>
-      <p>常见文件：<code>config.json</code>（设置与位置）、<code>pet_journal.json</code>（宠物日记）、<code>pet_diary_chat.json</code>（和它唠嗑）、会话 JSON 等。</p>
+      <p>可用环境变量 <code>DSH_PET_DATA_ROOT</code> 自定义数据根。常见文件：<code>config.json</code>（设置与位置）、<code>pet_journal.json</code>（宠物日记）、<code>pet_diary_chat.json</code>（和它唠嗑）、会话 JSON 等。</p>
     </section>
 
     <section id="uninstall">
       <h2>卸载与升级</h2>
       <ul class="clean">
-        <li><b>卸载（安装版）</b>：设置 → 应用 → 已安装的应用 → 找到 <code>dsh-pet-standalone</code> → 卸载。配置与会话默认保留，彻底清除可手动删数据目录。</li>
+        <li><b>卸载（安装版）</b>：设置 → 应用 → 已安装的应用 → 找到 <code>dsh-pet-standalone</code> → 卸载。卸载会<b>清除全部用户数据</b>（配置、会话、宠物日记、缓存与 API Key），如需保留请先备份。</li>
         <li><b>升级（安装版）</b>：运行新版 setup.exe 覆盖安装，配置与聊天记录不受影响。</li>
         <li><b>绿色版</b>：解压覆盖旧文件夹即可；删除文件夹即卸载。</li>
       </ul>
